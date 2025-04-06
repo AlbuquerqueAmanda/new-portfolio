@@ -5,11 +5,11 @@ import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 const Projects = () => {
   const projects = [
     {
-      image: "/img.png", 
+      image: "/images/portfolio.png", 
       title: "Portfolio Personale",
       description: "Sito web personale per presentare competenze, studi, progetti e contatti come sviluppatrice front-end. Realizzato utilizzando React.js, Bootstrap, Material UI, HTML, CSS e JavaScript.",
-      github: "https://github.com/seuusuario/progetto1",
-      vercel: "https://progetto1.vercel.app"
+      github: "https://github.com/AlbuquerqueAmanda/new-portfolio",
+      vercel: "https://amandaalbuquerque.vercel.app/projects"
     },
     {
       image: "/images/tea-shop.png",
