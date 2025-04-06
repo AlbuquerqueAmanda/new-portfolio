@@ -1,67 +1,57 @@
 import React from 'react';
-import { Box, IconButton } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ShareIcon from '@mui/icons-material/Share';
-import LanguageIcon from '@mui/icons-material/Language';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import SvgIcon from '@mui/material/SvgIcon';
+import DownloadIcon from '@mui/icons-material/Download';
 
-const VercelIcon = (props) => (
-  <SvgIcon {...props}>
-    <path d="M12 2L24 22H0L12 2Z" />
-  </SvgIcon>
-);
-
-const FloatingIcons = () => {
+const Footer = () => {
   return (
     <Box
+      component="footer"
       sx={{
-        position: 'fixed',
-        bottom: 20,
-        right: 20,
+        width: '100%',
+        py: 4,
+        mb: 2,
+        px: 3,
         display: 'flex',
-        flexDirection: 'column',
-        gap: 1,
-        zIndex: 9999,
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 4,
+        flexWrap: 'wrap',
+        mt: 'auto',
       }}
     >
-      <IconButton
-        color="primary"
-        aria-label="LinkedIn"
-        onClick={() => window.open('https://www.linkedin.com/in/seu-perfil', '_blank')}
+      <Link
+        href="https://www.linkedin.com/in/amanda-albuquerque-58b489261/"
+        target="_blank"
+        underline="none"
+        sx={{ display: 'flex', alignItems: 'center', color: '#554865', gap: 1 }}
       >
         <LinkedInIcon />
-      </IconButton>
-      <IconButton
-        color="primary"
-        aria-label="GitHub"
-        onClick={() => window.open('https://github.com/seu-usuario', '_blank')}
+        <Typography variant="body2">LinkedIn</Typography>
+      </Link>
+
+      <Link
+        href="https://github.com/AlbuquerqueAmanda"
+        target="_blank"
+        underline="none"
+        sx={{ display: 'flex', alignItems: 'center', color: '#554865', gap: 1 }}
       >
         <GitHubIcon />
-      </IconButton>
-      <IconButton
-        color="primary"
-        aria-label="Vercel"
-        onClick={() => window.open('https://vercel.com/seu-usuario', '_blank')}
+        <Typography variant="body2">GitHub</Typography>
+      </Link>
+
+      <Link
+        href="/docs/CV-ITA-AMANDA.pdf"
+        download="CV_AmandaAlbuquerque.pdf"
+        underline="none"
+        sx={{ display: 'flex', alignItems: 'center', color: '#554865', gap: 1 }}
       >
-        <VercelIcon />
-      </IconButton>
-      <IconButton
-        color="primary"
-        aria-label="Compartilhar"
-        onClick={() => console.log('compartilhar')}
-      >
-        <ShareIcon />
-      </IconButton>
-      <IconButton
-        color="primary"
-        aria-label="Mudar idioma"
-        onClick={() => console.log('mudar idioma')}
-      >
-        <LanguageIcon />
-      </IconButton>
+        <DownloadIcon />
+        <Typography variant="body2">CV</Typography>
+      </Link>
     </Box>
   );
 };
 
-export default FloatingIcons;
+export default Footer;

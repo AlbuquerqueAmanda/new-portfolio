@@ -1,43 +1,51 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 
-const AboutSection = ({ title, subtitle, number, image, active }) => {
+const AboutSection = ({ title, subtitle, number, isExpanded, onClick, content }) => {
   return (
     <Box
+      onClick={onClick}
       sx={{
-        flex: 1,
-        height: '100vh',
-        backgroundColor: active ? '#f7f7f7' : '#fff',
-        backgroundImage: image ? `url(${image})` : 'none',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        position: 'relative',
+        width: '100%',
+        height: isExpanded ? 'auto' : '20vh',
+        overflow: 'hidden',
+        backgroundColor: isExpanded ? '#f7f7f7' : '#fff',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
-        p: 3,
-        borderRight: '1px solid #eee',
+        padding: 3,
+        borderBottom: '1px solid #eee',
+        cursor: 'pointer',
+        transition: 'all 0.4s ease-in-out',
       }}
     >
+      {/* Titolo e sottotitolo */}
       <Box>
-        <Typography variant="h5" sx={{ fontWeight: 'bold', textTransform: 'uppercase' }}>
+        <Typography
+          variant="h5"
+          sx={{ fontWeight: 'bold', textTransform: 'uppercase' }}
+          style={{ color: '#554865' }}
+        >
           {title}
         </Typography>
         <Typography variant="subtitle2" sx={{ mt: 1 }}>
           {subtitle}
         </Typography>
+
+      {/* Contenuto extra visibile solo quando aperto */}
+      {isExpanded && (
+      <Box sx={{ mt: 2 }}>
+        {typeof content === 'string' ? (
+        <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>
+          {content}
+        </Typography>
+      ) : (
+        content
+      )}
       </Box>
-      <Typography
-        variant="h2"
-        sx={{
-          fontSize: '8rem',
-          fontWeight: 600,
-          color: active ? '#000' : '#d32f2f',
-          alignSelf: 'center',
-        }}
-      >
-        {number}
-      </Typography>
+    )}
+
+      </Box>
     </Box>
   );
 };
