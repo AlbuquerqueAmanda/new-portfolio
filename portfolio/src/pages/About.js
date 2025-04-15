@@ -145,38 +145,6 @@ Today, I continue my journey as a frontend developer, aiming to grow continuousl
   )}
               </Typography>
               <Certificate />
-              <Typography sx={{ mt: 2 }}>
-  {(function () {
-    const languageTexts = {
-      pt: [
-        <strong key="title">🌍 LÍNGUAS:</strong>,
-        '🇧🇷 Português (nativo)',
-        '🇮🇹 Italiano (avançado)',
-        '🇺🇸 Inglês (avançado)',
-        '🇫🇷 Francês (básico)',
-      ],
-      en: [
-        <strong key="title">🌍 LANGUAGES:</strong>,
-        '🇧🇷 Portuguese (native)',
-        '🇮🇹 Italian (advanced)',
-        '🇺🇸 English (advanced)',
-        '🇫🇷 French (basic)',
-      ],
-      it: [
-        <strong key="title">🌍 LINGUE:</strong>,
-        '🇧🇷 Portoghese (madrelingua)',
-        '🇮🇹 Italiano (avanzato)',
-        '🇺🇸 Inglese (avanzato)',
-        '🇫🇷 Francese (base)',
-      ],
-    };
-
-    const lines = languageTexts[language] || languageTexts.pt;
-
-    return lines.map((line, index) => <div key={index}>{line}</div>);
-  })()}
-</Typography>
-
             </Box>
           }
           

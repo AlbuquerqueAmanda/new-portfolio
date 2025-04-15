@@ -2,8 +2,8 @@ import React from 'react';
 import Header from '../components/Header';
 import HeroText from '../components/HeroText';
 import { Container } from 'react-bootstrap';
-import FloatingIcons from '../components/FloatingIcons';
 import TechIcons from '../components/TechIcons';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <Header />
       <HeroText />
       <TechIcons />
-      <FloatingIcons />
+      <Footer />
     </Container>
   );
 };

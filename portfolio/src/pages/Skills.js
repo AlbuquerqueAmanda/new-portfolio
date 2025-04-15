@@ -21,85 +21,61 @@ const Skills = () => {
     pt: {
       hardTitle: '🎯 Competências Técnicas (Hard Skills)',
       softTitle: '💡 Competências Comportamentais (Soft Skills)',
+      langTitle: '🌍 Idiomas',
       hardSkills: [
-        'JavaScript',
-        'TypeScript',
-        'React.js',
-        'Next.js',
-        'Bootstrap',
-        'jQuery',
-        'Tailwind CSS',
-        'Material UI',
-        'Figma',
-        'Lógica de programação',
-        'HTML',
-        'CSS',
-        'Git',
-        'GitHub',
-        'Tableau (básico)',
-        'SQL (básico)',
+        'JavaScript', 'TypeScript', 'React.js', 'Next.js',
+        'Bootstrap', 'jQuery', 'Tailwind CSS', 'Material UI',
+        'Figma', 'Lógica de programação', 'HTML', 'CSS',
+        'Git', 'GitHub', 'Tableau (básico)', 'SQL (básico)',
       ],
       softSkills: [
-        'Comunicação',
-        'Resolução de problemas',
-        'Adaptabilidade',
-        'Flexibilidade',
+        'Comunicação', 'Resolução de problemas', 'Adaptabilidade', 'Flexibilidade',
+      ],
+      languages: [
+        '🇧🇷 Português (nativo)',
+        '🇮🇹 Italiano (avançado)',
+        '🇺🇸 Inglês (avançado)',
+        '🇫🇷 Francês (básico)',
       ],
     },
     en: {
       hardTitle: '🎯 Technical Skills (Hard Skills)',
       softTitle: '💡 Interpersonal Skills (Soft Skills)',
+      langTitle: '🌍 Languages',
       hardSkills: [
-        'JavaScript',
-        'TypeScript',
-        'React.js',
-        'Next.js',
-        'Bootstrap',
-        'jQuery',
-        'Tailwind CSS',
-        'Material UI',
-        'Figma',
-        'Programming logic',
-        'HTML',
-        'CSS',
-        'Git',
-        'GitHub',
-        'Tableau (basic)',
-        'SQL (basic)',
+        'JavaScript', 'TypeScript', 'React.js', 'Next.js',
+        'Bootstrap', 'jQuery', 'Tailwind CSS', 'Material UI',
+        'Figma', 'Programming logic', 'HTML', 'CSS',
+        'Git', 'GitHub', 'Tableau (basic)', 'SQL (basic)',
       ],
       softSkills: [
-        'Communication',
-        'Problem Solving',
-        'Adaptability',
-        'Flexibility',
+        'Communication', 'Problem Solving', 'Adaptability', 'Flexibility',
+      ],
+      languages: [
+        '🇧🇷 Portuguese (native)',
+        '🇮🇹 Italian (advanced)',
+        '🇺🇸 English (advanced)',
+        '🇫🇷 French (basic)',
       ],
     },
     it: {
       hardTitle: '🎯 Competenze Tecniche (Hard Skills)',
       softTitle: '💡 Competenze Trasversali (Soft Skills)',
+      langTitle: '🌍 Lingue',
       hardSkills: [
-        'JavaScript',
-        'TypeScript',
-        'React.js',
-        'Next.js',
-        'Bootstrap',
-        'jQuery',
-        'Tailwind CSS',
-        'Material UI',
-        'Figma',
-        'Logica di programmazione',
-        'HTML',
-        'CSS',
-        'Git',
-        'GitHub',
-        'Tableau (base)',
-        'SQL (base)',
+        'JavaScript', 'TypeScript', 'React.js', 'Next.js',
+        'Bootstrap', 'jQuery', 'Tailwind CSS', 'Material UI',
+        'Figma', 'Logica di programmazione', 'HTML', 'CSS',
+        'Git', 'GitHub', 'Tableau (base)', 'SQL (base)',
       ],
       softSkills: [
-        'Comunicazione',
-        'Problem Solving',
-        'Adattabilità',
-        'Flessibilità',
+        'Comunicazione', 'Problem Solving', 'Adattabilità', 'Flessibilità',
+      ],
+      languages: [
+        '🇧🇷 Portoghese (madrelingua)',
+        '🇮🇹 Italiano (avanzato)',
+        '🇺🇸 Inglese (avanzato)',
+        '🇫🇷 Francese (base)',
       ],
     },
   };
@@ -112,7 +88,7 @@ const Skills = () => {
       <Container className="mt-5">
         <Row className="justify-content-center gy-4">
           {/* Hard Skills */}
-          <Col md={6} lg={5}>
+          <Col md={6} lg={4}>
             <Card className="shadow-sm rounded-4 p-3">
               <Card.Header as="h5" className="bg-white border-0 text-primary fw-bold">
                 {content.hardTitle}
@@ -128,7 +104,7 @@ const Skills = () => {
           </Col>
 
           {/* Soft Skills */}
-          <Col md={6} lg={5}>
+          <Col md={6} lg={4}>
             <Card className="shadow-sm rounded-4 p-3">
               <Card.Header as="h5" className="bg-white border-0 text-success fw-bold">
                 {content.softTitle}
@@ -149,6 +125,31 @@ const Skills = () => {
               </Card.Body>
             </Card>
           </Col>
+
+          {/* Languages */}
+          <Col md={6} lg={4}>
+            <Card className="shadow-sm rounded-4 p-3">
+              <Card.Header as="h5" className="bg-white border-0 fw-bold" style={{ color: '#6a1b9a' }} >
+                {content.langTitle}
+              </Card.Header>
+              <Card.Body>
+                {content.languages.map((lang, idx) => (
+                  <span
+                    key={idx}
+                    style={{
+                      ...badgeStyle,
+                      backgroundColor: '#f3e5f5',
+                      display: 'block',
+                      width: 'fit-content',
+                      color: '#6a1b9a',
+                    }}
+                  >
+                    {lang}
+                  </span>
+                ))}
+              </Card.Body>
+            </Card>
+          </Col>
         </Row>
       </Container>
     </Container>
@@ -156,4 +157,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
