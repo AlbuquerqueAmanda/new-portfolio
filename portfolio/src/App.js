@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './pages/About';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   return (
+    <LanguageProvider>
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,6 +18,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
       </Routes>
     </Router>
+    </LanguageProvider>
   );
 }
 

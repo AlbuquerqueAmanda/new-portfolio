@@ -1,10 +1,27 @@
-import React from 'react';
-import { Box, Link, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Link, Typography, IconButton, Menu, MenuItem } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DownloadIcon from '@mui/icons-material/Download';
+import LanguageIcon from '@mui/icons-material/Language';
+import { useLanguage } from '../context/LanguageContext'; 
 
 const Footer = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const open = Boolean(anchorEl);
+  const { setLanguage } = useLanguage(); 
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = (language) => {
+    setAnchorEl(null);
+    if (language) {
+      setLanguage(language); 
+    }
+  };
+
   return (
     <Box
       component="footer"
@@ -50,6 +67,37 @@ const Footer = () => {
         <DownloadIcon />
         <Typography variant="body2">CV</Typography>
       </Link>
+
+      <Box>
+        <IconButton
+          onClick={handleClick}
+          aria-controls={open ? 'language-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          sx={{ display: 'flex', alignItems: 'center', color: '#554865', gap: 1 }}
+        >
+          <LanguageIcon />
+          <Typography variant="body2">Language</Typography>
+        </IconButton>
+        <Menu
+          id="language-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={() => handleClose()}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          transformOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right',
+          }}
+        >
+          <MenuItem onClick={() => handleClose('pt')}>Portuguese</MenuItem>
+          <MenuItem onClick={() => handleClose('en')}>English</MenuItem>
+          <MenuItem onClick={() => handleClose('it')}>Italian</MenuItem>
+        </Menu>
+      </Box>
     </Box>
   );
 };

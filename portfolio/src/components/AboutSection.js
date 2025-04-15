@@ -1,7 +1,9 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
-const AboutSection = ({ title, subtitle, number, isExpanded, onClick, content }) => {
+const AboutSection = ({ title, subtitle, isExpanded, onClick, content }) => {
   return (
     <Box
       onClick={onClick}
@@ -28,6 +30,11 @@ const AboutSection = ({ title, subtitle, number, isExpanded, onClick, content })
         >
           {title}
         </Typography>
+        {isExpanded ? (
+          <ExpandLessIcon sx={{ color: '#554865' }} />
+        ) : (
+          <ExpandMoreIcon sx={{ color: '#554865' }} />
+        )}
         <Typography variant="subtitle2" sx={{ mt: 1 }}>
           {subtitle}
         </Typography>
