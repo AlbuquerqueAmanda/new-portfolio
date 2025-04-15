@@ -88,7 +88,7 @@ const Skills = () => {
       <Container className="mt-5 mb-5">
         <Row className="justify-content-center gy-4">
           {/* Hard Skills */}
-          <Col md={6} lg={4}>
+          <Col sm={12} md={6} lg={4}>
             <Card className="shadow-sm rounded-4 p-3">
               <Card.Header as="h5" className="bg-white border-0 text-primary fw-bold">
                 {content.hardTitle}
