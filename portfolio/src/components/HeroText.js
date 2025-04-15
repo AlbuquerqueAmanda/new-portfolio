@@ -25,7 +25,7 @@ const HeroText = () => {
       My main responsibility is designing and implementing web systems, from the interface to backend integration, ensuring a smooth and efficient user experience.`,
     },
     pt: {
-      greeting: 'Oi! Eu sou a Amanda.',
+      greeting: 'Oi! Eu sou Amanda.',
       titleLine1: 'Desenvolvo interfaces',
       titleLine2: 'modernas focadas na ',
       titleLine3: '',
