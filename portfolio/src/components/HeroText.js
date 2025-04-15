@@ -27,7 +27,7 @@ const HeroText = () => {
     pt: {
       greeting: 'Oi! Eu sou a Amanda.',
       titleLine1: 'Desenvolvo interfaces',
-      titleLine2: 'modernas voltadas para a ',
+      titleLine2: 'modernas focadas na ',
       titleLine3: '',
       titleSpan: 'experiência do usuário',
       description: `Atuo como desenvolvedora de software frontend, contribuindo para a criação de soluções digitais. 
