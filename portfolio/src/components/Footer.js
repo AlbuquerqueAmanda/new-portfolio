@@ -93,9 +93,9 @@ const Footer = () => {
             horizontal: 'right',
           }}
         >
-          <MenuItem onClick={() => handleClose('pt')}>Portuguese</MenuItem>
-          <MenuItem onClick={() => handleClose('en')}>English</MenuItem>
-          <MenuItem onClick={() => handleClose('it')}>Italian</MenuItem>
+          <MenuItem onClick={() => handleClose('pt')}>Portuguese 🇧🇷</MenuItem>
+          <MenuItem onClick={() => handleClose('en')}>English 🇺🇸</MenuItem>
+          <MenuItem onClick={() => handleClose('it')}>Italian 🇮🇹</MenuItem>
         </Menu>
       </Box>
     </Box>
