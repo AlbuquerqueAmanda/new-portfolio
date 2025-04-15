@@ -83,9 +83,9 @@ const Skills = () => {
   const content = translations[language] || translations.it;
 
   return (
-    <Container fluid className="px-3">
+    <Container fluid className="px-3" style={{ minHeight: '100vh' }}>
       <Header />
-      <Container className="mt-5">
+      <Container className="mt-5 mb-5">
         <Row className="justify-content-center gy-4">
           {/* Hard Skills */}
           <Col md={6} lg={4}>
