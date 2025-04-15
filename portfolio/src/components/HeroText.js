@@ -17,7 +17,7 @@ const HeroText = () => {
     },
     en: {
       greeting: "Hi! I’m Amanda.",
-      titleLine1: 'I design modern',
+      titleLine1: 'I develop modern',
       titleLine2: 'user-focused',
       titleLine3: '',
       titleSpan: 'interfaces',
