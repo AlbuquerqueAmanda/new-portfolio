@@ -71,6 +71,15 @@ const Certificate = () => {
       },
       link: '/certificates/data-analyst.pdf',
     },
+    {
+      title: 'UX Design',
+      description: {
+        pt: 'Estudo dos conceitos de UX e UI Design, uso do Figma, leis e princípios do UX, usabilidade, visual design, criação de personas, UX Writing, pesquisa com usuários, desk research, design brief, design thinking e prototipação.',
+        en: 'Study of UX and UI Design concepts, use of Figma, UX laws and principles, usability, visual design, persona creation, UX writing, user research, desk research, design brief, design thinking, and prototyping.',
+        it: 'Studio dei concetti di UX e UI Design, utilizzo di Figma, leggi e principi dell’UX, usabilità, visual design, creazione di personas, UX writing, ricerca con gli utenti, desk research, design brief, design thinking e prototipazione.',
+      },      
+      link: '/certificates/ux.pdf',
+    },
   ].map((item, index) => (
     <Box
       key={index}

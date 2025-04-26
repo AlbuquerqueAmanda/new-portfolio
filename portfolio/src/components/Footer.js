@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Link, Typography, IconButton, Menu, MenuItem } from '@mui/material';
+import { Box, Link as MuiLink, Typography, IconButton, Menu, MenuItem } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import DownloadIcon from '@mui/icons-material/Download';
@@ -9,16 +9,28 @@ import { useLanguage } from '../context/LanguageContext';
 const Footer = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const { setLanguage } = useLanguage(); 
+  const { language, setLanguage } = useLanguage();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = (language) => {
+  const handleClose = (lang) => {
     setAnchorEl(null);
-    if (language) {
-      setLanguage(language); 
+    if (lang) {
+      setLanguage(lang);
+    }
+  };
+
+  const getCvFileName = () => {
+    switch (language) {
+      case 'pt':
+        return '/docs/DEV_FRONTEND_AMANDA_ALBUQUERQUE_BR.pdf';
+      case 'it':
+        return '/docs/DEV_FRONTEND_AMANDA_ALBUQUERQUE_IT.pdf';
+      case 'en':
+      default:
+        return '/docs/DEV_FRONTEND_AMANDA_ALBUQUERQUE_ENG.pdf';
     }
   };
 
@@ -38,7 +50,8 @@ const Footer = () => {
         mt: 'auto',
       }}
     >
-      <Link
+      <MuiLink
+        component="a"
         href="https://www.linkedin.com/in/amanda-albuquerque-58b489261/"
         target="_blank"
         underline="none"
@@ -46,9 +59,10 @@ const Footer = () => {
       >
         <LinkedInIcon />
         <Typography variant="body2">LinkedIn</Typography>
-      </Link>
+      </MuiLink>
 
-      <Link
+      <MuiLink
+        component="a"
         href="https://github.com/AlbuquerqueAmanda"
         target="_blank"
         underline="none"
@@ -56,17 +70,18 @@ const Footer = () => {
       >
         <GitHubIcon />
         <Typography variant="body2">GitHub</Typography>
-      </Link>
+      </MuiLink>
 
-      <Link
-        href="/docs/CV-ITA-AMANDA.pdf"
-        download="CV_AmandaAlbuquerque.pdf"
+      <MuiLink
+        component="a"
+        href={getCvFileName()}
+        download
         underline="none"
         sx={{ display: 'flex', alignItems: 'center', color: '#554865', gap: 1 }}
       >
         <DownloadIcon />
         <Typography variant="body2">CV</Typography>
-      </Link>
+      </MuiLink>
 
       <Box>
         <IconButton
