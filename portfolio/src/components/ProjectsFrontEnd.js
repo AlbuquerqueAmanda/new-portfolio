@@ -14,7 +14,7 @@ const ProjectsFrontEnd = () => {
         {
           image: "/images/task-dash.png",
           title: "Task Dashboard",
-          description: "Dashboard di task con calendario interattivo, filtro per stato, dark mode e colori pastello. Creato con Next.js, TypeScript e Tailwind.",
+          description: "Dashboard di task con calendario interattivo e filtro per stato. Creato con Next.js, TypeScript e Tailwind.",
           technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
           github: "https://github.com/AlbuquerqueAmanda/task-dashboard",
           vercel: "https://taskdashboard.vercel.app/",
@@ -56,7 +56,7 @@ const ProjectsFrontEnd = () => {
         {
           image: "/images/task-dash.png",
           title: "Task Dashboard",
-          description: "Dashboard de tarefas com calendário interativo, filtro por status, dark mode e cores pastel. Criado com Next.js, TypeScript e Tailwind.",
+          description: "Dashboard de tarefas com calendário interativo e filtro por status. Criado com Next.js, TypeScript e Tailwind.",
           technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
           github: "https://github.com/AlbuquerqueAmanda/task-dashboard",
           vercel: "https://taskdashboard.vercel.app/",
@@ -98,7 +98,7 @@ const ProjectsFrontEnd = () => {
         {
           image: "/images/task-dash.png",
           title: "Task Dashboard",
-          description: "Task dashboard with interactive calendar, status filtering, dark mode, and pastel color theme. Built with Next.js, TypeScript, and Tailwind.",
+          description: "Task dashboard with interactive calendar and status filtering. Built with Next.js, TypeScript, and Tailwind.",
           technologies: ["Next.js", "TypeScript", "Tailwind CSS" ],
           github: "https://github.com/AlbuquerqueAmanda/task-dashboard",
           vercel: "https://taskdashboard.vercel.app/",
