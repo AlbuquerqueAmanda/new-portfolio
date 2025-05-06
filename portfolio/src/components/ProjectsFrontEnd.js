@@ -12,6 +12,14 @@ const ProjectsFrontEnd = () => {
       technologies: 'Tecnologie:',
       projects: [
         {
+          image: "/images/task-dash.png",
+          title: "Task Dashboard",
+          description: "Dashboard di task con calendario interattivo, filtro per stato, dark mode e colori pastello. Creato con Next.js, TypeScript e Tailwind.",
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+          github: "https://github.com/AlbuquerqueAmanda/task-dashboard",
+          vercel: "https://taskdashboard.vercel.app/",
+        },
+        {
           image: "/images/portfolio.png",
           title: "Portfolio Personale",
           description:
@@ -46,6 +54,14 @@ const ProjectsFrontEnd = () => {
       technologies: 'Tecnologias:',
       projects: [
         {
+          image: "/images/task-dash.png",
+          title: "Task Dashboard",
+          description: "Dashboard de tarefas com calendário interativo, filtro por status, dark mode e cores pastel. Criado com Next.js, TypeScript e Tailwind.",
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+          github: "https://github.com/AlbuquerqueAmanda/task-dashboard",
+          vercel: "https://taskdashboard.vercel.app/",
+        },
+        {
           image: "/images/portfolio.png",
           title: "Portfólio Pessoal",
           description:
@@ -79,6 +95,14 @@ const ProjectsFrontEnd = () => {
       vercel: 'Vercel',
       technologies: 'Technologies:',
       projects: [
+        {
+          image: "/images/task-dash.png",
+          title: "Task Dashboard",
+          description: "Task dashboard with interactive calendar, status filtering, dark mode, and pastel color theme. Built with Next.js, TypeScript, and Tailwind.",
+          technologies: ["Next.js", "TypeScript", "Tailwind CSS" ],
+          github: "https://github.com/AlbuquerqueAmanda/task-dashboard",
+          vercel: "https://taskdashboard.vercel.app/",
+        },
         {
           image: "/images/portfolio.png",
           title: "Personal Portfolio",
